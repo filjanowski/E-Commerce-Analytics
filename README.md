@@ -52,11 +52,11 @@ Power Query handles:
 - A Customer Summary table grouped by customer_unique_id, containing purchase counts, second-purchase intervals, frequency bands and return-eligibility flags.
 customer_unique_id identifies returning customers across orders. customer_id connects each order to its customer record and is used for that relationship.
 Core reporting relationships:
-```mermaid
 
-![ ](https://github.com/filjanowski/E-Commerce-Analytics/blob/main/Ralationships.png)
 
-```
+![](https://github.com/filjanowski/E-Commerce-Analytics/blob/main/Ralationships.png)
+
+
 Arrows represent single-direction filter propagation. Item and payment records remain in separate tables, avoiding duplicated totals when an order has multiple items and multiple payment entries. Reviews and category translations are incorporated through Power Query merges.
 DAX measures calculate sales, order counts, payment shares, review averages and customer-return rates. Supporting measures are reused in KPI formulas and formatted payment labels.
 How the 90-day return metric works
