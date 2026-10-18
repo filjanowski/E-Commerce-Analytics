@@ -54,7 +54,7 @@ customer_unique_id identifies returning customers across orders. customer_id con
 Core reporting relationships:
 ```mermaid
 
-![image alt](https://github.com/filjanowski/E-Commetce-Analytics/blob/5aa040f4377d3caded9118a1a8276ff269ec84bb/Ralationships.png)
+![ ](https://github.com/filjanowski/E-Commerce-Analytics/blob/main/Ralationships.png)
 
 ```
 Arrows represent single-direction filter propagation. Item and payment records remain in separate tables, avoiding duplicated totals when an order has multiple items and multiple payment entries. Reviews and category translations are incorporated through Power Query merges.
