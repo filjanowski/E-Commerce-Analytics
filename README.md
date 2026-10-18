@@ -54,12 +54,7 @@ customer_unique_id identifies returning customers across orders. customer_id con
 Core reporting relationships:
 ```mermaid
 
-    CS["Customer Summary"] -->|"1:* · customer_unique_id"| C["Customers"]
-    C -->|"1:* · customer_id"| O["Orders"]
-    CAL["Calendar"] -->|"1:* · purchase date"| O
-    O -->|"1:* · order_id"| I["Order_items"]
-    O -->|"1:* · order_id"| PAY["Payments"]
-    P["Products"] -->|"1:* · product_id"| I
+![image alt](https://github.com/filjanowski/E-Commetce-Analytics/blob/5aa040f4377d3caded9118a1a8276ff269ec84bb/Ralationships.png)
 ```
 Arrows represent single-direction filter propagation. Item and payment records remain in separate tables, avoiding duplicated totals when an order has multiple items and multiple payment entries. Reviews and category translations are incorporated through Power Query merges.
 DAX measures calculate sales, order counts, payment shares, review averages and customer-return rates. Supporting measures are reused in KPI formulas and formatted payment labels.
